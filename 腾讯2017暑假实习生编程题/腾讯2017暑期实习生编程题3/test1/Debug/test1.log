@@ -1,0 +1,6 @@
+﻿  源.cpp
+c:\users\德玛西亚\desktop\test\test1\test1\源.cpp(24): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\德玛西亚\desktop\test\test1\test1\源.cpp(63): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\德玛西亚\desktop\test\test1\test1\源.cpp(75): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\德玛西亚\desktop\test\test1\test1\源.cpp(134): warning C4018: “<”: 有符号/无符号不匹配
+  test1.vcxproj -> C:\Users\德玛西亚\Desktop\test\test1\Debug\test1.exe

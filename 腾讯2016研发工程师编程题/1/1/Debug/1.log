@@ -1,0 +1,4 @@
+﻿  源.cpp
+c:\users\德玛西亚\desktop\文件\use\牛客网\鹅厂\腾讯2016研发工程师编程题\1\1\源.cpp(18): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 _main，该符号在函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中被引用
+C:\Users\德玛西亚\Desktop\文件\use\牛客网\鹅厂\腾讯2016研发工程师编程题\1\Debug\1.exe : fatal error LNK1120: 1 个无法解析的外部命令
