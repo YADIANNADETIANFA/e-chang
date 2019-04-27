@@ -1,3 +1,5 @@
+//给定一个字符串s，你可以从中删除一些字符，使得剩下的串是一个回文串。如何删除才能使得回文串最长呢？
+//输出需要删除的字符个数
 #include<iostream>
 #include<string>
 #include<algorithm>
@@ -8,7 +10,7 @@ const int MAX = 1001;
 int MaxLen[MAX][MAX];
 int maxLen(string s1, string s2)
 {
-	for (int i = 0; i < MAX; ++i)//�������ں�������
+	for (int i = 0; i < MAX; ++i)//不能至于函数外面
 		MaxLen[i][0] = 0;
 	for (int i = 0; i < MAX; ++i)
 		MaxLen[0][i] = 0;
@@ -20,7 +22,7 @@ int maxLen(string s1, string s2)
 		for (int j = 1; j <= length2; ++j)
 		{
 			if (s1[i-1] == s2[j-1])
-				MaxLen[i][j] = MaxLen[i - 1][j - 1] + 1;////����˼·���������������Ϊs1,s2����MaxLen(i,j)��ʾ��s1�����i���ַ��γɵ��Ӵ�����s2��ߵ�j���ַ��γɵ��Ӵ�������������еĳ���(i,j��0��ʼ�㣩����MaxLen(i,j) ���Ǳ���ġ�״̬�� 
+				MaxLen[i][j] = MaxLen[i - 1][j - 1] + 1;////解题思路：设输入的两个串为s1,s2，设MaxLen(i,j)表示：s1的左边i个字符形成的子串，与s2左边的j个字符形成的子串的最长公共子序列的长度(i,j从0开始算），则MaxLen(i,j) 就是本题的“状态” 
 			else
 				MaxLen[i][j] = max(MaxLen[i - 1][j], MaxLen[i][j - 1]);
 		}
@@ -40,7 +42,7 @@ int main()
 			return 0;
 		}
 		string s2=s;
-		reverse(s2.begin(), s2.end());//ѧ��reverse
+		reverse(s2.begin(), s2.end());//学会reverse
 		int maxNum = maxLen(s, s2);
 		cout << s.size()-maxNum << endl;
 		
