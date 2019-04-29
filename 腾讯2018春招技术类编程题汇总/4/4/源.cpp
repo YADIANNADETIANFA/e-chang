@@ -1,3 +1,5 @@
+//小Q有X首长度为A的不同的歌和Y首长度为B的不同的歌，现在小Q想用这些歌组成一个总长度正好为K的歌单，每首歌最多只能在歌单中出现一次，
+//在不考虑歌单内歌曲的先后顺序的情况下，请问有多少种组成歌单的方法。
 /*#include<iostream>
 #include<cstdio>
 #include<vector>
@@ -6,10 +8,10 @@ using namespace std;
 
 int main()
 {
-	int k;//�赥�ܳ���
+	int k;//歌单总长度
 	while (cin >> k)
 	{
-		int A, x, B, y;//��ΪA��x�ף���ΪB��y��
+		int A, x, B, y;//长为A有x首；长为B有y首
 		cin >> A >> x >> B >> y;
 
 		vector<unsigned long long> res;
@@ -20,7 +22,7 @@ int main()
 			{
 				if (select_x*A + select_y * B == k)
 				{
-					unsigned long long one_res = 0;//unsigned long long����ô������,Ҫʹ������ת�ַ���ô������
+					unsigned long long one_res = 0;//unsigned long long都他么超界了,要使用数字转字符串么。。。
 					unsigned long long res_A_up = 1;
 					unsigned long long res_A_down = 1;
 					for (int i = x; i > x - select_x; i--)
@@ -63,7 +65,7 @@ int main()
 	}
 	return 0;
 }*/
-#include<cstdio>//ѧϰC��ϵĽⷨ��������ѧ���ɷ�����C(n, k) = C(n - 1, k) + C(n - 1, k - 1����
+#include<cstdio>//学习C组合的解法：利用数学归纳法：由C(n, k) = C(n - 1, k) + C(n - 1, k - 1）；
 #include<iostream>        
 using namespace std;
 
